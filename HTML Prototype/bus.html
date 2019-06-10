@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Bus Shelter</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+  <!--Google Jquery-->    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+    
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+    
+  <script>
+      $(document).ready(function(){
+          $("#housing").click(function(){
+              $("#housing-vis").after(" <li><div></div></li>");
+          });
+          $("#restaurant").click(function(){
+              $("#restaurant-vis").after(" <li><div></div></li>");
+          });
+          $("#parking").click(function(){
+              $("#parking-vis").after(" <li><div></div></li>");
+          });
+          $("#publicspace").click(function(){
+              $("#public-vis").after(" <li><div></div></li>");
+          });
+      });
+  </script>
+    
+  <style>
+      ul{
+          text-align: center;
+      }
+      li{
+          list-style-type: none;
+      }  
+      #left{
+          margin-top: 10%;
+
+      }
+
+      .visualization{
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+          width: 100%
+      }
+      .visual{
+          display: inline-block;
+          margin-left: 50px;
+      }
+      #housing{
+          background-color: bisque;
+      }
+      #restaurant{
+          background-color: aquamarine;
+      }
+      #parking{
+          background-color: cornflowerblue;
+      }
+      #publicspace{
+          background-color: cornsilk;
+      }
+      li div{
+          height: 50px;
+          width: 50px;
+          margin-left: auto;
+          margin-right: auto;
+      }
+      div:first-child ul li div{
+          background-color: bisque;
+      }
+      div ul:nth-of-type(2) li div{
+          background-color: aquamarine;
+      }
+      div ul:nth-of-type(3) li div{
+          background-color: cornflowerblue;
+      }
+      div ul:nth-of-type(4) li div{
+          background-color: cornsilk;
+      }
+      .button{
+          margin-top: 50px;
+          margin-left: auto;
+          margin-right: auto;
+          width: 400px;
+      }
+  </style>
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container" style="max-width: 2000px; width: 100%;">
+    <div class="row">
+      <div class="one-half column" id="right" style="margin-top: 10%; font-size: 1.5em;">
+        <ul class="four columns" style="max-width: 150px">
+            <li class="visualization" id="housing-vis">Housing</li>
+        </ul>
+        <ul class="four columns" style="max-width: 150px">
+            <li class="visualization" id="restaurant-vis">Restaurant</li>
+        </ul>
+        <ul class="four columns" style="max-width: 150px">
+            <li class="visualization" id="parking-vis">Parking</li>
+        </ul>
+        <ul class="four columns" style="max-width: 175px">
+            <li class="visualization" id="public-vis">Public Space</li>
+        </ul>
+      </div>
+      <div class="one-half column" id="left">
+        <h1>What do you like to see around Chauncey Mall in the future?</h1>
+        <ul>
+            <li><input type="button" value="Housing" id="housing" class="button"></li>
+            <li><input type="button" value="Restaurant" id="restaurant" class="button"></li>
+            <li><input type="button" value="Parking" id="parking" class="button"></li>
+            <li><input type="button" value="Public Space" id="publicspace" class="button"></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
